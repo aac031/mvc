@@ -24,7 +24,7 @@ services:
       - MYSQL_DATABASE=demo
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=secret
-    networks:+
+    networks:
       - backend
   mvc:
     build: ./dockerfiles/mvc
