@@ -24,21 +24,7 @@ services:
       - MYSQL_DATABASE=demo
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=secret
-    networks:
-      - backend
-  ejercicios:
-    build: ./dockerfiles/introduccionphp
-    container_name: ejercicios
-    hostname: ejercicios
-    volumes:
-      - ./data/ejercicios:/var/www/html
-    depends_on:
-      - db
-    environment:
-      - VIRTUAL_HOST=ejercicios.local,www.ejercicios.local
-    restart: always
-    networks:
-      - frontend
+    networks:+
       - backend
   mvc:
     build: ./dockerfiles/mvc
