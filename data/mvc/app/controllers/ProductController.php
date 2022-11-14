@@ -1,46 +1,25 @@
 <?php
-class ProductController {
-    function __construct()
-    {
-        echo "<br>Constructor clase PRODUCTCONTROLLER";
-    }
-    
-    function index() {
-        echo "<br>Dentro de index de PRODUCTCONTROLLER";
-    }
+require "../Product.php";
 
-    function show() {
-        echo "<br>Dentro de show de PRODUCTCONTROLLER";
-    }
-}
-
-/*
-<?php
-
-require_once "Product.php";
-
-class Controller
+class ProductController
 {
     function __construct()
     {
-    }
-    /* Función que:
-     - recoge todos los productos
-     - llama a vista de inventario 
-    public function home()
-    {
-        $products = Product::all();
-        require "views/home.php";
+        //echo "<br>Constructor clase PRODUCTCONTROLLER";
     }
 
-    /* Función que:
-     - recuperar un producto en particular, el id como parametro.
-     - llamar a una vista de un producto en concreto. 
-    public function show()
+    function index()
     {
+        //echo "<br>Dentro de index de PRODUCTCONTROLLER";
+        $products = Product::all();
+        require "../views/home.php";
+    }
+
+    function show()
+    {
+        //echo "<br>Dentro de show de PRODUCTCONTROLLER";
         $id = $_GET["id"];
         $product = Product::find($id);
-        require "views/show.php";
+        require "../views/show.php";
     }
-} 
-?> */
+}

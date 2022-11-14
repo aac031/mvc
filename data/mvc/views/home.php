@@ -16,7 +16,7 @@
             <tr>
                 <td>Identificador: <?= $item[0] ?> </td>
                 <td>Descripción: <?= $item[1] ?> </td>
-                <td><a href="?method=show&&id=<?= $item[0] ?>">Ver detalle</a></td>
+                <td><a href="show?id=<?= $item[0] ?>">Ver detalle</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
